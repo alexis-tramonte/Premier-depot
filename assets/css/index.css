@@ -16,5 +16,11 @@
 /* Styles globaux pour le projet */
 
 body {
-
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
