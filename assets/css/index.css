@@ -1,0 +1,20 @@
+/* Variables CSS utilisées dans le projet */
+
+:root {
+    --color-turquoise: #17abb3;
+    --color-gris-foncé: #333333;
+    --color-gris-très-clair: #e3e3e3;
+    --color-blanc-cassé: #f5f5f5;
+    --color-blanc: #ffffff;
+    --font-family: 'Lato', sans-serif;
+    --font-family-secondaire: 'Raleway', sans-serif;
+    --font-size: 16px;
+    --line-height: 1.5;
+}
+
+
+/* Styles globaux pour le projet */
+
+body {
+
+}
