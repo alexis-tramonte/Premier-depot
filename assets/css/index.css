@@ -34,6 +34,24 @@ header {
     color: var(--color-blanc);
     padding: 20px;
     text-align: center;
+    position: relative;
+}
+
+header a {
+    color: var(--color-blanc);
+    text-decoration: none;
+}
+
+.photo-profil {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 120px;
+    max-width: none;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 /*taille des images*/
@@ -47,11 +65,46 @@ img {
 /* Taille des titres */
 
 h1 {
-    font-size: 32px;
+    margin: 0 auto;
+    font-size: 60px;
 }
 
+h2 {
+    margin: 0 auto;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/*Taille des paragraphes*/
+
+p {
+    width: 320px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Styles pour la liste de header */
+
 ul {
-    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    margin: 0 auto;
     padding: 0;
+    list-style: none;
+    transform: translateX(45px);
+}
+
+ul li {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+ul a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
