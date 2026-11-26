@@ -8,6 +8,8 @@
     --color-blanc: #ffffff;
     --font-family: 'Lato', sans-serif;
     --font-family-secondaire: 'Raleway', sans-serif;
+    --font-style-italic: italic;
+    --font-weight-bold: bold;
     --font-size: 16px;
     --line-height: 1.5;
 }
@@ -24,6 +26,14 @@ body {
     justify-content: center;
     min-height: 100vh;
     font-size: 16px;
+    font-family: var(--font-family-secondaire);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-family);
 }
 
 /* Styles pour le header */
@@ -117,11 +127,17 @@ main {
     gap: 0;
     width: 100%;
     margin: 0;
+    font-size: 13px;
+}
+
+main p {
+    font-size: 15px;
 }
 
 main h3 {
     color: var(--color-turquoise);
     font-size: 24px;
+    font-weight: normal;
     padding-bottom: 4px;
     margin-bottom: 12px;
     border-bottom: 1px solid var(--color-gris-très-clair);
@@ -132,10 +148,13 @@ main h3 {
 
 .skills-list,
 .languages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     margin: 0;
     padding: 0;
     list-style: none;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
 }
 
 /* Styles pour les items de la liste de compétences et de langues */
@@ -153,9 +172,15 @@ main h3 {
 }
 
 .rating {
-    color: var(--color-turquoise);
-    letter-spacing: 2px;
+    display: inline-flex;
+    gap: 2px;
     white-space: nowrap;
+}
+
+.rating img {
+    width: 12px;
+    height: 12px;
+    max-width: none;
 }
 
 /* Styles pour les bullets turquoise */
@@ -168,14 +193,14 @@ main h3 {
 .turquoise-bullets li {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
 
 .turquoise-bullets li::before {
     content: "";
-    flex: 0 0 8px;
-    width: 8px;
-    height: 8px;
+    flex: 0 0 6px;
+    width: 6px;
+    height: 6px;
     background-color: var(--color-turquoise);
 }
 
@@ -183,16 +208,12 @@ main h3 {
 /* Styles pour les boxes */
 
 .box {
+    box-sizing: border-box;
     padding: 24px;
+    padding-left: 40px;
     padding-bottom: 48px;
     background-color: var(--color-blanc);
     border: 1px solid var(--color-blanc-cassé);
-}
-
-.box:not(.box-gris) > section > p {
-    width: auto;
-    margin: 0;
-    text-align: left;
 }
 
 .article-entete {
@@ -238,6 +259,7 @@ main h3 {
     margin: 0;
     font-size: 13px;
     line-height: 1.2;
+    font-style: var(--font-style-italic);
 }
 
 .Effet-1:hover,
@@ -266,6 +288,13 @@ main h3 {
     padding-left: 0;
 }
 
+.box:not(.box-gris) > section > p {
+    width: auto;
+    margin: 0;
+    text-align: justify;
+    text-indent: 1.5em;
+}
+
 
 /* Styles pour le footer */
 
@@ -286,7 +315,7 @@ footer nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 16px;
 }
 
 footer a {
@@ -298,7 +327,8 @@ footer a {
 }
 
 footer p {
-    font-size: 12px;
+    font-size: 10px;
+    font-style: var(--font-style-italic);
 }
 
 .footer-nav img {
