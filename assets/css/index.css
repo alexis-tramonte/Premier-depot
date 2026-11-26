@@ -29,12 +29,15 @@ body {
 /* Styles pour le header */
 
 header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    align-items: center;
     width: 100%;
+    box-sizing: border-box;
     background-color: var(--color-turquoise);
     color: var(--color-blanc);
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
-    position: relative;
 }
 
 header a {
@@ -43,10 +46,7 @@ header a {
 }
 
 .photo-profil {
-    position: absolute;
-    left: 24px;
-    top: 50%;
-    transform: translateY(-50%);
+    justify-self: center;
     width: 120px;
     height: 120px;
     max-width: none;
@@ -113,15 +113,26 @@ header ul a {
 
 main {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: 0;
     width: 100%;
-    margin: 24px 0;
+    margin: 0;
+}
+
+main h3 {
+    color: var(--color-turquoise);
 }
 
 .box {
     padding: 24px;
     background-color: var(--color-blanc);
     border: 1px solid var(--color-gris-très-clair);
-    border-radius: 8px;
+}
+
+/* Styles pour les boxes */
+
+/*Box gris (première box) */
+
+.box-gris {
+    background-color: var(--color-gris-très-clair);
 }
