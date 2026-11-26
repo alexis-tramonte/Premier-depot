@@ -121,6 +121,10 @@ main {
 
 main h3 {
     color: var(--color-turquoise);
+    font-size: 24px;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--color-gris-très-clair);
 }
 
 
@@ -181,17 +185,84 @@ main h3 {
 .box {
     padding: 24px;
     background-color: var(--color-blanc);
-    border: 1px solid var(--color-gris-très-clair);
+    border: 1px solid var(--color-blanc-cassé);
+}
+
+.box:not(.box-gris) > section > p {
+    width: auto;
+    margin: 0;
+    text-align: left;
+}
+
+.article-entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.article-entete h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.Date-section {
+    color: var(--color-turquoise);
+    flex-shrink: 0;
+}
+
+.Effet-1 {
+    position: relative;
+    display: block;
+    width: calc(100% + 6px);
+    box-sizing: border-box;
+    margin-left: -6px;
+    padding: 12px 0 12px 6px;
+    transition: background-color 0.2s ease;
+}
+
+.Effet-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+.Effet-1 p {
+    width: auto;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+.Effet-1:hover,
+.Effet-1:focus-within {
+    background-color: var(--color-gris-très-clair);
+}
+
+.Effet-1:hover::before,
+.Effet-1:focus-within::before {
+    background-color: var(--color-turquoise);
 }
 
 
 /*Box gris */
 
 .box-gris {
-    background-color: var(--color-gris-très-clair);
+    background-color: var(--color-blanc-cassé);
     text-align: left;
+}
+
+.box-gris > section + section {
+    margin-top: 25px;
 }
 
 .box-gris ul {
     padding-left: 0;
 }
+
+
