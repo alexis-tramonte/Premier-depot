@@ -123,16 +123,75 @@ main h3 {
     color: var(--color-turquoise);
 }
 
+
+/* Styles pour la liste de compétences */
+
+.skills-list,
+.languages-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: bold;
+}
+
+/* Styles pour les items de la liste de compétences et de langues */
+
+.skills-list li,
+.languages-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.languages-list li span:last-child {
+    font-weight: normal;
+}
+
+.rating {
+    color: var(--color-turquoise);
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+/* Styles pour les bullets turquoise */
+
+.turquoise-bullets {
+    padding-left: 0;
+    list-style: none;
+}
+
+.turquoise-bullets li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.turquoise-bullets li::before {
+    content: "";
+    flex: 0 0 8px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-turquoise);
+}
+
+
+/* Styles pour les boxes */
+
 .box {
     padding: 24px;
     background-color: var(--color-blanc);
     border: 1px solid var(--color-gris-très-clair);
 }
 
-/* Styles pour les boxes */
 
-/*Box gris (première box) */
+/*Box gris */
 
 .box-gris {
     background-color: var(--color-gris-très-clair);
+    text-align: left;
+}
+
+.box-gris ul {
+    padding-left: 0;
 }
