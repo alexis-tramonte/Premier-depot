@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
+    <!-- Métadonnées de la page et ressources chargées dans l'en-tête. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href="favicon.ico">
+    <title>CV — Alexis Tramonte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="image/cv.png">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
 
@@ -12,36 +17,40 @@
     <!-- Header -->
 
     <header>
-        <a class="Effet-2" href="image/portrait.png" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le portrait en grand">
-            <img class="photo-profil" src="image/portrait.png" alt="Portrait de Prénom Nom">
-        </a>
+        <div class="photo-profil-conteneur">
+            <!-- Le lien ouvre le fichier original dans un nouvel onglet. -->
+            <a class="Effet-2" href="image/portrait.jpg" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le portrait en grand">
+                <img class="photo-profil" src="image/portrait.jpg" alt="Portrait de Prénom Nom">
+            </a>
+        </div>
+        <!-- Coordonnées et informations principales du CV. -->
         <nav>
-            <h1>Prénom Nom</h1>
-            <h2>Développeur web et Web Mobile</h2>
+            <h1>Alexis TRAMONTE</h1>
+            <h2>Développeur web & web mobile</h2>
             <ul>
                 <li>
-                    <a href="#">
-                        <img src="image/email.png" alt="Mail"> Mail
+                    <!-- Les liens spécialisés ouvrent directement le service correspondant. -->
+                    <a id="email-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ale.tra@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <img src="image/email.png" alt="Mail"> ale.tra@gmail.com
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="image/address.png" alt="Adresse"> Adresse
+                    <a href="https://www.google.com/maps/search/?api=1&query=15+Imp.+des+Marronniers,+13014+Marseille">
+                        <img src="image/address.png" alt="Adresse"> 15 Imp. des Marronniers, 13014 Marseille
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <img src="image/telephone.png" alt="Téléphone"> Téléphone
+                    <a href="tel:+33612345678">
+                        <img src="image/telephone.png" alt="Téléphone"> +33 6 12 34 56 78
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <span class="header-info">
                         <img src="image/permis.png" alt="Permis B"> Permis B
-                    </a>
+                    </span>
                 </li>
             </ul>
         </nav>
-        <link rel="stylesheet" href="assets/css/index.css">
     </header>
     
 
@@ -55,11 +64,13 @@
             <!-- Section 1.1 : Compétences -->
             <section>
                 <h3>Compétences</h3>
+                    <!-- Le niveau est annoncé aux lecteurs d'écran ; les étoiles sont décoratives. -->
                 <ul class="skills-list">
-                    <li><span>HTML</span><span class="rating" role="img" aria-label="4 étoiles sur 5"><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-outline.svg" alt=""></span></li>
-                    <li><span>CSS</span><span class="rating" role="img" aria-label="4 étoiles sur 5"><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-outline.svg" alt=""></span></li>
-                    <li><span>JavaScript</span><span class="rating" role="img" aria-label="2 étoiles sur 5"><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-outline.svg" alt=""><img src="image/star-outline.svg" alt=""><img src="image/star-outline.svg" alt=""></span></li>
-                    <li><span>PHP</span><span class="rating" role="img" aria-label="1 étoile sur 5"><img src="image/star-full.svg" alt=""><img src="image/star-outline.svg" alt=""><img src="image/star-outline.svg" alt=""><img src="image/star-outline.svg" alt=""><img src="image/star-outline.svg" alt=""></span></li>
+                    <li><span>HTML</span><span class="rating" role="img" aria-label="3 étoiles sur 5"><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-outline.svg" alt=""><img src="image/star-outline.svg" alt=""></span></li>
+                    <li><span>CSS</span><span class="rating" role="img" aria-label="3 étoiles sur 5"><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-outline.svg" alt=""><img src="image/star-outline.svg" alt=""></span></li>
+                    <li><span>JavaScript</span><span class="rating" role="img" aria-label="1 étoile sur 5"><img src="image/star-full.svg" alt=""><img src="image/star-outline.svg" alt=""><img src="image/star-outline.svg" alt=""><img src="image/star-outline.svg" alt=""><img src="image/star-outline.svg" alt=""></span></li>
+                    <li><span>C++</span><span class="rating" role="img" aria-label="1 étoile sur 5"><img src="image/star-full.svg" alt=""><img src="image/star-outline.svg" alt=""><img src="image/star-outline.svg" alt=""><img src="image/star-outline.svg" alt=""><img src="image/star-outline.svg" alt=""></span></li>
+                    <li><span>Python</span><span class="rating" role="img" aria-label="4 étoiles sur 5"><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-full.svg" alt=""><img src="image/star-outline.svg" alt=""></span></li>
                 </ul>
             </section>
 
@@ -68,8 +79,8 @@
                 <h3>Langues</h3>
                 <ul class="languages-list">
                     <li><span>Français</span><span>Langue maternelle</span></li>
-                    <li><span>Anglais</span><span>Professionnel</span></li>
-                    <li><span>Allemand</span><span>Notions</span></li>
+                    <li><span>Anglais</span><span>Notions</span></li>
+                    <li><span>Italien</span><span>Notions</span></li>
                 </ul>
             </section>
 
@@ -78,9 +89,9 @@
                 <h3>Qualités</h3>
                 <ul class="turquoise-bullets">
                     <li>Esprit d'équipe</li>
-                    <li>Autonomie</li>
-                    <li>Organisation</li>
-                    <li>Créativité</li>
+                    <li>Curiosité et envie d'apprendre</li>
+                    <li>Rigueur</li>
+                    <li>Sensibilité aux enjeux environnementaux</li>
                 </ul>
             </section>
 
@@ -88,9 +99,10 @@
             <section>
                 <h3>Centres d'intérêt</h3>
                 <ul class="turquoise-bullets">
-                    <li>Yoga</li>
-                    <li>Tennis</li>
+                    <li>Jeux vidéo</li>
+                    <li>Basket-ball</li>
                     <li>Ecologie</li>
+                    <li>Informatique</li>
                 </ul>
             </section>
 
@@ -102,51 +114,51 @@
             <!-- Section 2.1 : Profil -->
             <section>
                 <h3>Profil</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                <p>
+                    Développeur web en formation, je souhaite contribuer à des projets numériques utiles à la transition écologique au sein 
+                    d’une start-up GreenTech. Je mobilise mes compétences en HTML, CSS et JavaScript pour concevoir des interfaces claires et accessibles.
+                    Curieux et rigoureux, j’aime apprendre en équipe et progresser au contact de développeurs expérimentés.
+                </p>
+
             </section>
 
             <!-- Section 2.2 : Formations -->
             <section>
                 <h3>Formations</h3>
+                <!-- Chaque article regroupe une formation, sa période et son établissement. -->
                 <article class="Effet-1">
                     <div class="article-entete">
-                        <h4>Titre Professionnel DWWM</h4>
-                        <span class="Date-section">Date à compléter</span>
+                        <h4>Formation Développeur Web</h4>
+                        <span class="Date-section">2025/2026</span>
                     </div>
                     <p>Centre Européen de Formation</p>
                 </article>
                 <article class="Effet-1">
                     <div class="article-entete">
-                        <h4>Remise à Niveau - Métiers du numérique</h4>
-                        <span class="Date-section">Date à compléter</span>
+                        <h4>1ère année Licence informatique</h4>
+                        <span class="Date-section">Septembre 2024 - Juin 2025</span>
                     </div>
-                    <p>Lycée de la ville</p>
+                    <p>Aix-Marseille Université</p>
                 </article>
                 <article class="Effet-1">
                     <div class="article-entete">
-                        <h4>Baccalauréat</h4>
-                        <span class="Date-section">Date à compléter</span>
+                        <h4>Baccalauréat (spécialités Mathématiques &amp; NSI)</h4>
+                        <span class="Date-section">2024</span>
                     </div>
-                    <p>Lycée de la ville</p>
+                    <p>Lycée polyvalent Antonin Artaud</p>
                 </article>
             </section>
 
             <!-- Section 2.3 : Stages -->
             <section>
                 <h3>Stages</h3>
+                <!-- Les expériences suivent la même structure que les formations. -->
                 <article class="Effet-1">
                     <div class="article-entete">
-                        <h4>Gestionnaire de paye</h4>
-                        <span class="Date-section">Date à compléter</span>
+                        <h4>Aucun</h4>
+                        <span class="Date-section">Aucun</span>
                     </div>
-                    <p>Société Truc & Machin</p>
-                </article>
-                <article class="Effet-1">
-                    <div class="article-entete">
-                        <h4>Agent d'accueil</h4>
-                        <span class="Date-section">Date à compléter</span>
-                    </div>
-                    <p>Mairie de la ville</p>
+                    <p>Aucun</p>
                 </article>
             </section>
 
@@ -155,24 +167,10 @@
                 <h3>Expérience professionnelle</h3>
                 <article class="Effet-1">
                     <div class="article-entete">
-                        <h4>Agent d'accueil</h4>
-                        <span class="Date-section">Date à compléter</span>
+                        <h4>Aucun</h4>
+                        <span class="Date-section">Aucun</span>
                     </div>
-                    <p>Mairie de la ville</p>
-                </article>
-                <article class="Effet-1">
-                    <div class="article-entete">
-                        <h4>Chauffeur - Livreur</h4>
-                        <span class="Date-section">Date à compléter</span>
-                    </div>
-                    <p>Transport Nénès & Fils</p>
-                </article>
-                <article class="Effet-1">
-                    <div class="article-entete">
-                        <h4>Préparateur de commandes</h4>
-                        <span class="Date-section">Date à compléter</span>
-                    </div>
-                    <p>Le slip français</p>
+                    <p>Aucun</p>
                 </article>
             </section>
 
@@ -184,6 +182,7 @@
     <!-- Footer -->
 
     <footer>
+        <!-- Les libellés accessibles identifient les icônes de réseaux sociaux. -->
         <nav class="footer-nav" aria-label="Réseaux sociaux">
             <a href="https://fr.linkedin.com/" aria-label="LinkedIn">
                 <img class="Effet-3" src="image/linkedin.svg" alt="">
@@ -195,7 +194,21 @@
                 <img class="Effet-3" src="image/instagram.svg" alt="">
             </a>
         </nav>
-        <p>Mise à jour le : JJ/MM/AAAA</p>
+        <p>Mise à jour le : 27/11/2026</p>
     </footer>
+    <script>
+        const emailLink = document.getElementById('email-link');
+
+        emailLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            const emailWindow = window.open(emailLink.href, 'email-window', 'popup=yes,width=900,height=700');
+
+            if (emailWindow) {
+                emailWindow.opener = null;
+            } else {
+                window.open(emailLink.href, '_blank', 'noopener,noreferrer');
+            }
+        });
+    </script>
 </body>
 </html>
