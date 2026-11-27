@@ -56,12 +56,16 @@ header a {
 }
 
 .photo-profil {
-    justify-self: center;
     width: 120px;
     height: 120px;
     max-width: none;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.Effet-2 {
+    justify-self: center;
+    cursor: zoom-in;
 }
 
 /*taille des images*/
@@ -337,5 +341,13 @@ footer p {
     max-width: none;
     object-fit: contain;
     filter: brightness(0) invert(1);
+}
+
+.Effet-3 {
+    transition: opacity 0.2s ease;
+}
+
+.Effet-3:hover {
+    opacity: 0.7;
 }
 
