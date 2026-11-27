@@ -1,5 +1,7 @@
 /* Variables CSS utilisées dans le projet */
 
+/* Couleurs et réglages typographiques partagés dans toute la page. */
+
 :root {
     --color-turquoise: #17abb3;
     --color-gris-foncé: #333333;
@@ -8,12 +10,16 @@
     --color-blanc: #ffffff;
     --font-family: 'Lato', sans-serif;
     --font-family-secondaire: 'Raleway', sans-serif;
-    --font-size: 16px;
-    --line-height: 1.5;
+    --font-style-italic: italic;
+    --font-weight-bold: bold;
+    --font-size: 1rem;
 }
 
 
 /* Styles globaux pour le projet */
+
+/* Le body empile le header, le main et le footer verticalement.
+   Les tailles en rem suivent la taille de texte choisie dans le navigateur. */
 
 body {
     width: 1160px;
@@ -23,4 +29,400 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    font-size: var(--font-size);
+    font-family: var(--font-family-secondaire);
+    font-variant-numeric: lining-nums tabular-nums;
 }
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-family);
+}
+
+/* Styles pour le header */
+
+/* Le header réserve un quart de sa largeur à la photo et trois quarts à la navigation. */
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--color-turquoise);
+    color: var(--color-blanc);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header a {
+    color: var(--color-blanc);
+    text-decoration: none;
+}
+
+.photo-profil {
+    box-sizing: border-box;
+    width: 120px;
+    height: 120px;
+    max-width: none;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-blanc);
+}
+
+.photo-profil-conteneur {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.Effet-2 {
+    display: inline-flex;
+    width: 120px;
+    height: 120px;
+    cursor: zoom-in;
+    /* La zone cliquable et le curseur suivent le contour circulaire de la photo. */
+    clip-path: circle(50%);
+}
+
+header nav {
+    flex: 3;
+    min-width: 0;
+}
+
+/*taille des images*/
+
+/* Taille par défaut des petites icônes ; les images qui ont un style dédié
+   (portrait, étoiles, réseaux sociaux) redéfinissent ces dimensions plus bas. */
+
+img {
+    max-width: 18px;
+    height: auto;
+}
+
+/* Taille des titres */
+
+h1 {
+    margin: 0 auto;
+    font-size: 3.75rem;
+}
+
+h2 {
+    margin: 0 auto;
+    font-size: 1.875rem;
+    margin-bottom: 20px;
+}
+
+/*Taille des paragraphes*/
+
+p {
+    width: 320px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+/* Styles pour la liste de header */
+
+/* Les quatre coordonnées du header se répartissent sur deux rangées. */
+
+header ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 400px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+header ul li {
+    flex: 0 0 130px;
+    min-width: 0;
+    box-sizing: border-box;
+    margin: 6px 15px;
+}
+
+header ul a,
+header ul .header-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 5px;
+    font-size: 1rem;
+}
+
+header ul a img,
+header ul .header-info img {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+header ul li:nth-child(2) a {
+    width: 210px;
+    white-space: normal;
+}
+
+header ul li:nth-child(3) a {
+    white-space: nowrap;
+}
+
+
+/* Styles pour le main */
+
+/* Les deux colonnes du CV gardent un ratio de largeur de 1 à 3. */
+
+main {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    font-size: 0.8125rem;
+}
+
+main > .box-gris {
+    flex: 1;
+    min-width: 0;
+}
+
+main > .box:not(.box-gris) {
+    flex: 3;
+    min-width: 0;
+}
+
+main p {
+    font-size: 0.9375rem;
+}
+
+main h3 {
+    color: var(--color-turquoise);
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--color-gris-très-clair);
+}
+
+
+/* Styles pour la liste de compétences */
+
+/* Les listes Compétences et Langues utilisent des lignes sans puces. */
+
+.skills-list,
+.languages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: var(--font-weight-bold);
+}
+
+/* Styles pour les items de la liste de compétences et de langues */
+
+/* Les libellés restent à gauche et les notes ou niveaux à droite. */
+
+.skills-list li,
+.languages-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.languages-list li span:last-child {
+    font-weight: normal;
+}
+
+.rating {
+    display: inline-flex;
+    gap: 2px;
+    white-space: nowrap;
+}
+
+.rating img {
+    width: 12px;
+    height: 12px;
+    max-width: none;
+}
+
+/* Styles pour les bullets turquoise */
+
+/* Ces carrés sont dessinés en CSS pour pouvoir contrôler leur taille et leur couleur. */
+
+.turquoise-bullets {
+    padding-left: 0;
+    list-style: none;
+}
+
+.turquoise-bullets li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.turquoise-bullets li::before {
+    content: "";
+    flex: 0 0 6px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-turquoise);
+}
+
+
+/* Styles pour les boxes */
+
+/* Boîtes principales du CV : la boîte blanche a plus d'espace intérieur en bas. */
+
+.box {
+    box-sizing: border-box;
+    padding: 24px;
+    padding-left: 40px;
+    padding-bottom: 48px;
+    background-color: var(--color-blanc);
+    border: 1px solid var(--color-blanc-cassé);
+}
+
+.article-entete {
+    /* Le titre reste à gauche et la date est repoussée à droite. */
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.article-entete h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.Date-section {
+    color: var(--color-turquoise);
+    flex-shrink: 0;
+}
+
+.Effet-1 {
+    position: relative;
+    display: block;
+    /* Déborde légèrement du padding pour que le fond de survol rejoigne le trait. */
+    width: calc(100% + 6px);
+    box-sizing: border-box;
+    margin-left: -6px;
+    padding: 12px 0 12px 6px;
+    transition: background-color 0.2s ease;
+}
+
+.Effet-1::before {
+    /* Trait turquoise affiché au survol ou quand un élément reçoit le focus clavier. */
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+.Effet-1 p {
+    width: auto;
+    margin: 0;
+    font-size: 0.8125rem;
+    line-height: 1.2;
+    font-style: var(--font-style-italic);
+}
+
+.Effet-1:hover,
+.Effet-1:focus-within {
+    background-color: var(--color-gris-très-clair);
+}
+
+.Effet-1:hover::before,
+.Effet-1:focus-within::before {
+    background-color: var(--color-turquoise);
+}
+
+
+/*Box gris */
+
+/* Première colonne : fond gris clair et séparation verticale des rubriques. */
+
+.box-gris {
+    background-color: var(--color-blanc-cassé);
+    text-align: left;
+}
+
+.box-gris > section + section {
+    margin-top: 25px;
+}
+
+.box-gris ul {
+    padding-left: 0;
+}
+
+.box:not(.box-gris) > section > p {
+    width: auto;
+    margin: 0;
+    /* Le profil est justifié avec un retrait sur sa première ligne. */
+    text-align: justify;
+    text-indent: 1.5em;
+}
+
+
+/* Styles pour le footer */
+
+/* Pied de page turquoise avec les liens vers les réseaux sociaux. */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--color-turquoise);
+    color: var(--color-blanc);
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+footer a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-blanc);
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 0.625rem;
+    font-style: var(--font-style-italic);
+}
+
+.footer-nav img {
+    width: 24px;
+    height: 24px;
+    max-width: none;
+    object-fit: contain;
+    /* Les icônes SVG du footer s'affichent en blanc sur le fond turquoise. */
+    filter: brightness(0) invert(1);
+}
+
+.Effet-3 {
+    transition: opacity 0.2s ease;
+}
+
+.Effet-3:hover {
+    opacity: 0.7;
+}
+
